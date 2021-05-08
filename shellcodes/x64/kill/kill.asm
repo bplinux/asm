@@ -1,3 +1,10 @@
+;---------------------------------
+;bplinux@posteo.de
+;
+;this is used to sigkill every
+;process we are able to kill
+;---------------------------------
+
 [BITS 64]
 
 KILL	equ 62
