@@ -33,6 +33,7 @@ int validate_serial() {
 
 void do_valid_stuff() {
 	printf("Key is valid. This is a protected area!\n");
+	exit(EXIT_SUCCESS);
 }
 
 void do_invalid_stuff() {
