@@ -1,3 +1,10 @@
+;---------------------------------
+;bplinux@posteo.de
+;
+;this is used to terminate the
+;process and group cleanly
+;---------------------------------
+
 [BITS 64]
 
 EXIT_GROUP 	equ 231
