@@ -15,8 +15,6 @@ segment .text
 
 _start:	jmp _call
 _back:	pop rdi
-	mov al, 0x40
-	sub rsp, rax
 	xor rax, rax
 	mov [rdi+7], al ;for execution on stack
 	push rax
